@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Facebook Preview ke liye ADULT IMAGE with Proxy -->
+    <!-- Facebook Preview ke liye with Proxy -->
     <meta property="og:title" content="Hot View 🔥 Must See">
     <meta property="og:description" content="Wow 😈">
-    <meta property="og:image" content="https://api.allorigins.win/raw?url=https://scontent.fkhi6-2.fna.fbcdn.net/v/t1.15752-9/710077916_2295887230948259_8111086966016450609_n.webp?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7bS-RwR4iJ4Q7kNvwHsQPL7&_nc_oc=AdrLAg1LwjjMhBdOSwbPNV5tQmovsFvdFcAjanLMfWi9aUEKbhLfTzLm50kTEGg-6rk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkhi6-2.fna&_nc_ss=7a22e&oh=03_Q7cD5gGffWGEr3CrvCPKfFxr8tjrnMvuBk6fYVARDDyiL37bvQ&oe=6A4A3667">
+    <meta property="og:image" content="https://api.allorigins.win/raw?url=https://pub-5198cbdd4b1c4950ada79e22a5fa4052.r2.dev/IMG-20250322-WA0232.jif">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="800">
     <meta property="og:type" content="article">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://api.allorigins.win/raw?url=https://scontent.fkhi6-2.fna.fbcdn.net/v/t1.15752-9/710077916_2295887230948259_8111086966016450609_n.webp?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7bS-RwR4iJ4Q7kNvwHsQPL7&_nc_oc=AdrLAg1LwjjMhBdOSwbPNV5tQmovsFvdFcAjanLMfWi9aUEKbhLfTzLm50kTEGg-6rk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkhi6-2.fna&_nc_ss=7a22e&oh=03_Q7cD5gGffWGEr3CrvCPKfFxr8tjrnMvuBk6fYVARDDyiL37bvQ&oe=6A4A3667">
+    <meta name="twitter:image" content="https://api.allorigins.win/raw?url=https://pub-5198cbdd4b1c4950ada79e22a5fa4052.r2.dev/IMG-20250322-WA0232.jif">
     
     <title>Check This Out</title>
     
@@ -29,19 +29,27 @@
     </div>
 
     <script>
-        // Proxy + fallback for real browser
-        function loadImage() {
+        window.onload = function() {
             const proxy = "https://api.allorigins.win/raw?url=";
-            const original = "https://scontent.fkhi6-2.fna.fbcdn.net/v/t1.15752-9/710077916_2295887230948259_8111086966016450609_n.webp?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7bS-RwR4iJ4Q7kNvwHsQPL7&_nc_oc=AdrLAg1LwjjMhBdOSwbPNV5tQmovsFvdFcAjanLMfWi9aUEKbhLfTzLm50kTEGg-6rk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkhi6-2.fna&_nc_ss=7a22e&oh=03_Q7cD5gGffWGEr3CrvCPKfFxr8tjrnMvuBk6fYVARDDyiL37bvQ&oe=6A4A3667";
+            const orig = "https://pub-5198cbdd4b1c4950ada79e22a5fa4052.r2.dev/IMG-20250322-WA0232.jif";
             const img = document.getElementById('adultImg');
-            img.src = proxy + encodeURIComponent(original);
             
-            // Fallback direct if proxy fails
+            // Try proxy first
+            img.src = proxy + encodeURIComponent(orig);
+            
+            // Multiple fallback proxies
             img.onerror = function() {
-                img.src = original;
+                // Try another proxy
+                img.src = "https://corsproxy.io/?" + encodeURIComponent(orig);
             };
-        }
-        window.onload = loadImage;
+            
+            // Final direct fallback
+            setTimeout(() => {
+                if (!img.complete || img.naturalWidth === 0) {
+                    img.src = orig;
+                }
+            }, 1500);
+        };
     </script>
 </body>
 </html>
