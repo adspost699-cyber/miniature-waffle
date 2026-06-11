@@ -1,73 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html amp>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
-    
-    <!-- Open Graph Tags for Facebook -->
-    <meta property="og:title" content="Image View">
-    <meta property="og:description" content="Image display">
-    <meta property="og:image" content="https://cdn.fbsbx.com/v/t59.2708-21/721382085_27097545606614360_5177700272044715317_n.webp?_nc_cat=105&ccb=1-7&_nc_sid=de7c13&_nc_ohc=9CTlUUlGelgQ7kNvwEjPk-E&_nc_oc=AdrcaYiZ5CYonL124yPVTu2nkrU2IVFF0eHgaaAvBuEmbOg3lK7YiPLPpQyXTudpb64&_nc_zt=7&_nc_ht=cdn.fbsbx.com&_nc_gid=C92G0S98AADxepNIvrcYpg&_nc_ss=7b2a8&oh=03_Q7cD5gFsYBFiMV8qKblAp3WEjC5fCNjLt_ywmYKZ1Msatxl1KA&oe=6A2BBFEE">
-    <meta property="og:image:secure_url" content="https://cdn.fbsbx.com/v/t59.2708-21/721382085_27097545606614360_5177700272044715317_n.webp?_nc_cat=105&ccb=1-7&_nc_sid=de7c13&_nc_ohc=9CTlUUlGelgQ7kNvwEjPk-E&_nc_oc=AdrcaYiZ5CYonL124yPVTu2nkrU2IVFF0eHgaaAvBuEmbOg3lK7YiPLPpQyXTudpb64&_nc_zt=7&_nc_ht=cdn.fbsbx.com&_nc_gid=C92G0S98AADxepNIvrcYpg&_nc_ss=7b2a8&oh=03_Q7cD5gFsYBFiMV8qKblAp3WEjC5fCNjLt_ywmYKZ1Msatxl1KA&oe=6A2BBFEE">
-    <meta property="og:image:type" content="image/webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="1200">
-    <meta property="og:url" content="">
-    <meta property="og:type" content="website">
-    
-    <title>Image Viewer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: #1a1a1a;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .container {
-            max-width: 100%;
-            text-align: center;
-        }
-        .image-wrapper {
-            display: inline-block;
-            max-width: 100%;
-            background: #000;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            border: none;
-        }
-        .fallback {
-            color: #fff;
-            padding: 50px;
-            font-family: Arial, sans-serif;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+<!-- Open Graph Meta Tags for Facebook -->
+<meta property="og:title" content="Image View">
+<meta property="og:description" content="View this image">
+<meta property="og:image" content="https://cdn.fbsbx.com/v/t59.2708-21/721382085_27097545606614360_5177700272044715317_n.webp?_nc_cat=105&ccb=1-7&_nc_sid=de7c13&_nc_ohc=9CTlUUlGelgQ7kNvwEjPk-E&_nc_oc=AdrcaYiZ5CYonL124yPVTu2nkrU2IVFF0eHgaaAvBuEmbOg3lK7YiPLPpQyXTudpb64&_nc_zt=7&_nc_ht=cdn.fbsbx.com&_nc_gid=C92G0S98AADxepNIvrcYpg&_nc_ss=7b2a8&oh=03_Q7cD5gFsYBFiMV8qKblAp3WEjC5fCNjLt_ywmYKZ1Msatxl1KA&oe=6A2BBFEE">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.fbsbx.com/v/t59.2708-21/721382085_27097545606614360_5177700272044715317_n.webp?_nc_cat=105&ccb=1-7&_nc_sid=de7c13&_nc_ohc=9CTlUUlGelgQ7kNvwEjPk-E&_nc_oc=AdrcaYiZ5CYonL124yPVTu2nkrU2IVFF0eHgaaAvBuEmbOg3lK7YiPLPpQyXTudpb64&_nc_zt=7&_nc_ht=cdn.fbsbx.com&_nc_gid=C92G0S98AADxepNIvrcYpg&_nc_ss=7b2a8&oh=03_Q7cD5gFsYBFiMV8qKblAp3WEjC5fCNjLt_ywmYKZ1Msatxl1KA&oe=6A2BBFEE">
+
+<title>Image Viewer</title>
+<link rel="canonical" href="https://example.com">
+
+<style amp-custom>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  .image-wrapper {
+    width: 100%;
+    background: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  amp-img {
+    display: block;
+    margin: 0 auto;
+  }
+  .title {
+    color: #fff;
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  .description {
+    color: #ccc;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+</style>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="image-wrapper">
-            <img 
-                src="https://cdn.fbsbx.com/v/t59.2708-21/721382085_27097545606614360_5177700272044715317_n.webp?_nc_cat=105&ccb=1-7&_nc_sid=de7c13&_nc_ohc=9CTlUUlGelgQ7kNvwEjPk-E&_nc_oc=AdrcaYiZ5CYonL124yPVTu2nkrU2IVFF0eHgaaAvBuEmbOg3lK7YiPLPpQyXTudpb64&_nc_zt=7&_nc_ht=cdn.fbsbx.com&_nc_gid=C92G0S98AADxepNIvrcYpg&_nc_ss=7b2a8&oh=03_Q7cD5gFsYBFiMV8qKblAp3WEjC5fCNjLt_ywmYKZ1Msatxl1KA&oe=6A2BBFEE" 
-                alt="Image"
-                onerror="this.style.display='none'; document.getElementById('fallback').style.display='block';"
-            >
-            <div id="fallback" class="fallback" style="display: none;">
-                Image load nahi hui. URL expire ho sakti hai.
-            </div>
-        </div>
-    </div>
+
+<div class="container">
+  <div class="image-wrapper">
+    <!-- Image Display - Yeh visible hogi -->
+    <amp-img 
+      src="https://cdn.fbsbx.com/v/t59.2708-21/721382085_27097545606614360_5177700272044715317_n.webp?_nc_cat=105&ccb=1-7&_nc_sid=de7c13&_nc_ohc=9CTlUUlGelgQ7kNvwEjPk-E&_nc_oc=AdrcaYiZ5CYonL124yPVTu2nkrU2IVFF0eHgaaAvBuEmbOg3lK7YiPLPpQyXTudpb64&_nc_zt=7&_nc_ht=cdn.fbsbx.com&_nc_gid=C92G0S98AADxepNIvrcYpg&_nc_ss=7b2a8&oh=03_Q7cD5gFsYBFiMV8qKblAp3WEjC5fCNjLt_ywmYKZ1Msatxl1KA&oe=6A2BBFEE"
+      width="1200"
+      height="630"
+      layout="responsive"
+      alt="Image">
+    </amp-img>
+  </div>
+  
+  <h1 class="title">Image Viewer</h1>
+  <p class="description">Image is displayed above</p>
+</div>
+
 </body>
 </html>
